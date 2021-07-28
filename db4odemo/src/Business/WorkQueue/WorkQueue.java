@@ -1,0 +1,40 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Business.WorkQueue;
+
+import Business.Restaurant.Restaurant;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author raunak
+ */
+public class WorkQueue {
+    
+    private ArrayList<WorkRequest> workRequestList;
+    Restaurant restaurant;
+
+    public WorkQueue() {
+        workRequestList = new ArrayList();
+    }
+
+    public ArrayList<WorkRequest> getWorkRequestList() {
+        return workRequestList;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+    
+    public WorkRequest addRequest(){
+        WorkRequest wr = new LabTestWorkRequest();
+        workRequestList.add(wr);
+        return wr;
+    }
+}
